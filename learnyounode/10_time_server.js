@@ -9,7 +9,6 @@ var server = net.createServer(function (socket){
     var hor = String("00" + date.getHours()).slice(-2);
     var min = String("00" + date.getMinutes()).slice(-2);
     data = date.getFullYear().toString()+"-"+mes.toString()+"-"+dia.toString()+" "+hor.toString()+":"+min.toString()+"\n";  
-    //console.log(data);
     socket.end(data);
 });
 server.listen(puerto);
